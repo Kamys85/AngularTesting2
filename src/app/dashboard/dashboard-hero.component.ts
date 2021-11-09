@@ -1,12 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { Hero } from '../model/hero';
+import { Hero } from '../model';
 
 @Component({
   selector: 'dashboard-hero',
   template: `
     <div (click)="click()" class="hero">
-      {{hero.name | uppercase}}
+      {{
+        hero.name  }}
     </div>`,
   styleUrls: [ './dashboard-hero.component.css' ]
 })

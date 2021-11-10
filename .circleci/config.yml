@@ -8,7 +8,7 @@ jobs:
       - checkout
       - restore_cache:
           key: my-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - install node_js: npm install 16.10
+      - install_node_js: npm install 16.10
       - use: nvm use 16.10
       - install: npm install @angular/cli -g
       - save_cache:

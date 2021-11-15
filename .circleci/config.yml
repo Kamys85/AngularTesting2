@@ -8,9 +8,7 @@ jobs:
       - checkout
       - restore_cache:
           key: my-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - run: nvm install 12
-      - run: nvm use 12
-      - run: npm install @angular/cli -g
+      - run: npm -g install @angular/cli@8.3.25
       - save_cache:
           key: my-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
